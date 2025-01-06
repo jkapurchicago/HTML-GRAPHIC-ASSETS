@@ -21,7 +21,6 @@ This project contains several HTML files showcasing unique animations, styles, o
    
 6. **minimal-house-static-logo.html**Displays a minimal house with a static logo.
 
-   <iframe src="./minimal-house-static-logo.html" width="100%" height="500px"></iframe>
 7. **moving-circle.html**Animates a moving circle across the screen.
 
    
