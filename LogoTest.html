@@ -1,0 +1,54 @@
+<div class="house-icon">
+  <div class="house"></div>
+  <div class="chimney"></div>
+  <div class="smoke"></div>
+</div>
+
+
+
+<style> 
+.house-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.house {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #F44336;
+  border-radius: 10px;
+}
+
+.chimney {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background: #F44336;
+  right: 10px;
+  top: 10px;
+}
+
+.smoke {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #F5F5F5;
+  border-radius: 50%;
+  right: 12px;
+  top: 20px;
+  animation: smoke 2s linear infinite;
+}
+
+@keyframes smoke {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+
+</style> 

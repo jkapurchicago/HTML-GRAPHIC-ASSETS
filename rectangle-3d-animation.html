@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Building Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // Create a scene
+      var scene = new THREE.Scene();
+      
+      // Create a camera
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      camera.position.z = 5;
+      
+      // Create a renderer
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+      
+      // Create a building
+      var buildingGeometry = new THREE.BoxGeometry(1, 2, 1);
+      var buildingMaterial = new THREE.MeshLambertMaterial({color: 0xff0000});
+      var building = new THREE.Mesh(buildingGeometry, buildingMaterial);
+      scene.add(building);
+      
+      // Create a light
+      var light = new THREE.PointLight(0xffffff);
+      light.position.set(1, 1, 1);
+      scene.add(light);
+      
+      // Render the scene
+      function render() {
+        requestAnimationFrame( render );
+        building.rotation.x += 0.01;
+        building.rotation.y += 0.01;
+        renderer.render( scene, camera );
+      }
+      render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #logo {
+        text-align: center;
+      }
+      #logo img {
+        width: 200px; /* adjust as needed */
+        animation: animate-logo 2s linear infinite;
+      }
+      @keyframes animate-logo {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logo">
+      <img src="path/to/silhouette.png" alt="ownable logo">
+    </div>
+    <script>
+      const logo = document.getElementById("logo");
+      logo.addEventListener("mouseover", function() {
+        logo.style.filter = "brightness(1.5)";
+      });
+      logo.addEventListener("mouseout", function() {
+        logo.style.filter = "brightness(1)";
+      });
+    </script>
+  </body>
+</html>

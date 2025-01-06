@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .silhouette {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    .silhouette-person {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      border-radius: 50%;
+      animation: walk 1s infinite;
+    }
+    @keyframes walk {
+      0% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      100% { transform: translateX(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="silhouette">
+    <div class="silhouette-person"></div>
+  </div>
+</body>
+</html>
